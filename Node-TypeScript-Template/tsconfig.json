@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    // --- FILE LAYOUT (Necesario) ---
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // --- ENVIRONMENT & MODULES (Ajustado para Node) ---
+    // Usar CommonJS para Node tradicional (Express)
+    "module": "commonjs",
+    "target": "es2020", // O esnext
+    "esModuleInterop": true, // Para importar Express como default import
+    "moduleResolution": "node", // Cómo resuelve los módulos Node
+    "lib": ["es2020"],
+    "types": ["node"], 
+
+    // --- STRICTNESS (Alto nivel, buena práctica) ---
+    "strict": true, // ¡Lo más importante!
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true, // Descomentar para aún más estrictez
+    "noUnusedLocals": true, // Descomentar
+    "skipLibCheck": true, // Siempre se recomienda para velocidad
+
+    // --- OUTPUTS ---
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // --- CLEANUP (Eliminar/Comentar) ---
+    // "jsx": "react-jsx", // Eliminar (No es backend)
+    "verbatimModuleSyntax": false, // Desactivar si usas commonjs/esModuleInterop
+    "isolatedModules": true, // Dejar (Buena práctica)
+    "noUncheckedSideEffectImports": true, // Dejar (Estrictez)
+    "moduleDetection": "auto" // Auto o eliminar si ya tienes module: "commonjs"
+  }
+}
